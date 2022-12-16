@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        计组补天 - xlccccc&#39;s blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Follow heart </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/xlccccc.jpg" />
+        </div>
+        <div class="name">
+            <i>xlccccc</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MIPS%E6%8C%87%E4%BB%A4"><span class="toc-text">MIPS指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32%E4%BD%8D%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">32位寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">机器指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#R%E5%9E%8B"><span class="toc-text">R型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I%E5%9E%8B"><span class="toc-text">I型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E6%93%8D%E4%BD%9C"><span class="toc-text">逻辑操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E4%BD%8D-gt-gt-lt-lt"><span class="toc-text">移位(&gt;&gt;&lt;&lt;)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E4%BD%8D%E4%B8%8E-AND"><span class="toc-text">按位与(AND)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E4%BD%8D%E6%88%96-OR"><span class="toc-text">按位或(OR)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E4%BD%8D%E5%8F%96%E5%8F%8D-NOT"><span class="toc-text">按位取反(NOT)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%96%E9%9D%9E-NOT-OR"><span class="toc-text">或非(NOT OR)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%88%96-XOR"><span class="toc-text">异或(XOR)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B6%E8%BF%87%E7%A8%8B"><span class="toc-text">叶过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%8F%B6%E8%BF%87%E7%A8%8B"><span class="toc-text">非叶过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E8%BF%87%E7%A8%8B"><span class="toc-text">递归过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E8%BF%87%E7%A8%8B"><span class="toc-text">迭代过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E6%93%8D%E4%BD%9C"><span class="toc-text">字符操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-text">注意</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E8%BF%9B%E8%A1%8C%E8%BE%B9%E7%95%8C%E6%A3%80%E6%9F%A5"><span class="toc-text">利用无符号数进行边界检查</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Follow heart </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        计组补天
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2022-12-16 14:47:49</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#cs" title="cs">cs</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="MIPS指令"><a href="#MIPS指令" class="headerlink" title="MIPS指令"></a>MIPS指令</h2><table>
+<thead>
+<tr>
+<th>指令</th>
+<th>示例</th>
+<th>含义</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加法</td>
+<td>add $s1,$s2,$s3</td>
+<td>$s1&#x3D;$s2+$s3</td>
+<td></td>
+</tr>
+<tr>
+<td>减法</td>
+<td>sub $s1,$s2,$s3</td>
+<td>$s1&#x3D;$s2-$s3</td>
+<td></td>
+</tr>
+<tr>
+<td>立即数加法</td>
+<td>addi $s1,$s2,20</td>
+<td>$s1&#x3D;$s2+20</td>
+<td>立即数即常数</td>
+</tr>
+<tr>
+<td>乘法</td>
+<td>mul $s1,$s2,$s3</td>
+<td>$s1&#x3D;$s2*$s3</td>
+<td></td>
+</tr>
+<tr>
+<td>取字</td>
+<td>lw $s1,20($s2)</td>
+<td>$s1&#x3D;Memory[$s2+20]即a&#x3D;b[5]</td>
+<td>括号外的字节数只能用常数，用于取数组值</td>
+</tr>
+<tr>
+<td>存字</td>
+<td>sw $s1,20($s2)</td>
+<td>Memory[$s2+20]&#x3D;$s1即b[5]&#x3D;a</td>
+<td>用于对数组赋值</td>
+</tr>
+<tr>
+<td>取半字</td>
+<td>lh $s1,20($s2)</td>
+<td>$s1&#x3D;Memory[$s2+20]</td>
+<td>取字是该地址后四个字节，半字则两个字节</td>
+</tr>
+<tr>
+<td>取无符号半字</td>
+<td>lhu $s1,20($s2)</td>
+<td>$s1&#x3D;Memory[$s2+20]</td>
+<td>顾名思义，无符号</td>
+</tr>
+<tr>
+<td>存半字</td>
+<td>sh $s1,20($s2)</td>
+<td>Memory[$s2+20]&#x3D;$s1</td>
+<td></td>
+</tr>
+<tr>
+<td>取字节</td>
+<td>lb $s1,20($s2)</td>
+<td>$s1&#x3D;Memory[$s2+20]</td>
+<td>取一个字节</td>
+</tr>
+<tr>
+<td>取无符号字节</td>
+<td>lbu $s1,20($s2)</td>
+<td>$s1&#x3D;Memory[$s2+20]</td>
+<td></td>
+</tr>
+<tr>
+<td>存字节</td>
+<td>sb $s1,20($s2)</td>
+<td>Memory[$s2+20]&#x3D;$s1</td>
+<td></td>
+</tr>
+<tr>
+<td><em>取链接字</em></td>
+<td><em>ll $s1,20($s2)</em></td>
+<td><em>$s1&#x3D;Memory[$s2+20]</em></td>
+<td></td>
+</tr>
+<tr>
+<td><em>存条件字</em></td>
+<td><em>sc $s1,20($s2)</em></td>
+<td><em>Memory[$s2+20]&#x3D;$s1;$s1&#x3D;o or 1</em></td>
+<td></td>
+</tr>
+<tr>
+<td><em>取立即数的高位</em></td>
+<td><em>lui $s1,20</em></td>
+<td><em>$s1&#x3D;20</em>2^16*</td>
+<td></td>
+</tr>
+<tr>
+<td>与</td>
+<td>and $s1,$s2,$s3</td>
+<td>$s1&#x3D;$s2 &amp; $s3</td>
+<td>按位与</td>
+</tr>
+<tr>
+<td>或</td>
+<td>or $s1,$s2,$s3</td>
+<td>$s1&#x3D;$s2 | $s3</td>
+<td>按位或</td>
+</tr>
+<tr>
+<td>或非</td>
+<td>nor $s1,$s2,$s3</td>
+<td>$s1&#x3D;~($s2 | $s3)</td>
+<td>按位或非</td>
+</tr>
+<tr>
+<td>异或</td>
+<td>xor $s1,$s2,$s3</td>
+<td>异或</td>
+<td>异或</td>
+</tr>
+<tr>
+<td>立即数与</td>
+<td>andi $s1,$s2,20</td>
+<td>$s1&#x3D;$s2 &amp; 20</td>
+<td></td>
+</tr>
+<tr>
+<td>立即数或</td>
+<td>ori $s1,$s2,20</td>
+<td>$s1&#x3D;$s2 | 20</td>
+<td></td>
+</tr>
+<tr>
+<td>逻辑左移</td>
+<td>sll $s1,$s2,10</td>
+<td>$s1&#x3D;$s2&lt;&lt;10</td>
+<td>左移n位等同于乘2^n</td>
+</tr>
+<tr>
+<td>逻辑右移</td>
+<td>srl $s1,$s2,10</td>
+<td>$s1&#x3D;$s2&gt;&gt;10</td>
+<td>除2^n</td>
+</tr>
+<tr>
+<td>相等时跳转</td>
+<td>beq $s1,$s1,Else</td>
+<td>if($s1&#x3D;&#x3D;$s2) go to Else</td>
+<td>Else一般是后面定义的一个标签</td>
+</tr>
+<tr>
+<td>不相等时跳转</td>
+<td>bne $s1,$s1,Else</td>
+<td>if($s1!&#x3D;$s2) go to Else</td>
+<td></td>
+</tr>
+<tr>
+<td>小于时置位</td>
+<td>slt $s1,$s2,$s3</td>
+<td>if($s2&lt;$s3) $s1&#x3D;1;else $s1&#x3D;0</td>
+<td>前小于后则赋1</td>
+</tr>
+<tr>
+<td><strong>无符号数</strong>比较小于时置位</td>
+<td>sltu $s1,$s2,$s3</td>
+<td>if($s2&lt;$s3) $s1&#x3D;1;else $s1&#x3D;0</td>
+<td>无符号数</td>
+</tr>
+<tr>
+<td><strong>无符号数</strong>比较小于<strong>立即数</strong>时置位</td>
+<td>slti $s1,$s2,$s3</td>
+<td>if($s2&lt;20) $s1&#x3D;1;else $s1&#x3D;0</td>
+<td>比较是否小于常数</td>
+</tr>
+<tr>
+<td><strong>无符号数</strong>比较小于<strong>无符号立即数</strong>时置位</td>
+<td>sltiu $s1,$s2,$s3</td>
+<td>if($s2&lt;20) $s1&#x3D;1;else $s1&#x3D;0</td>
+<td>比较是否小于无符号常数</td>
+</tr>
+<tr>
+<td>跳转</td>
+<td>j 2500</td>
+<td>go to 10000</td>
+<td>当然标签也可以</td>
+</tr>
+<tr>
+<td>跳转至寄存器所指位置</td>
+<td>jr $ra</td>
+<td>go to $ra</td>
+<td>用于switch以及过程调用</td>
+</tr>
+<tr>
+<td>跳转并且链接</td>
+<td>jal 2500</td>
+<td>$ra&#x3D;PC+4;go to 10000</td>
+<td>用于过程调用</td>
+</tr>
+</tbody></table>
+<h2 id="32位寄存器"><a href="#32位寄存器" class="headerlink" title="32位寄存器"></a>32位寄存器</h2><table>
+<thead>
+<tr>
+<th>表示</th>
+<th>作用</th>
+<th>注释</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$zero</td>
+<td>寄存器的值恒为0</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>$v0~$v1</td>
+<td>计算结果，返回值</td>
+<td>用于返回值</td>
+<td>2~3</td>
+</tr>
+<tr>
+<td>$a0~$a3</td>
+<td>用于进入函数时传递参数</td>
+<td></td>
+<td>4~7</td>
+</tr>
+<tr>
+<td>$s0~$s7</td>
+<td>保留寄存器</td>
+<td>一般存一些重要的值</td>
+<td>16~23</td>
+</tr>
+<tr>
+<td>$t0~$t9</td>
+<td>临时寄存器</td>
+<td>其它函数或循环等中的临时变量</td>
+<td>8<del>15,24</del>25</td>
+</tr>
+<tr>
+<td>$at</td>
+<td>汇编器保留，用于处理大的常数</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$sp</td>
+<td>栈指针</td>
+<td>进入其它函数时</td>
+<td>29</td>
+</tr>
+<tr>
+<td>$ra</td>
+<td>返回指针</td>
+<td>用于返回起始点的返回地址寄存器</td>
+<td>31</td>
+</tr>
+<tr>
+<td>$gp</td>
+<td>全局指针</td>
+<td>指向静态数据区的保留寄存器,全局变量或static变量</td>
+<td></td>
+</tr>
+<tr>
+<td>$fp</td>
+<td>帧指针</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$k0~$k1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="机器指令"><a href="#机器指令" class="headerlink" title="机器指令"></a>机器指令</h2><h3 id="R型"><a href="#R型" class="headerlink" title="R型"></a>R型</h3><p>op与funct为<strong>六位</strong>，其他<strong>五位</strong>，加起来正好<strong>三十二位</strong></p>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>op(操作码)</th>
+<th>rs(操作数寄存器)</th>
+<th>rt(操作数寄存器)</th>
+<th>rd(目的寄存器)</th>
+<th>shamt(位移量)</th>
+<th>funct(功能码)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>add $t0, $s1, $s2</td>
+<td>0</td>
+<td>17(<strong>$s1</strong>)</td>
+<td>18(<strong>$s2</strong>)</td>
+<td>8(<strong>$t0</strong>)</td>
+<td>0</td>
+<td>32</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>0</td>
+<td>reg</td>
+<td>reg</td>
+<td>reg</td>
+<td>0</td>
+<td>34</td>
+</tr>
+</tbody></table>
+<h3 id="I型"><a href="#I型" class="headerlink" title="I型"></a>I型</h3><p>因rd寄存器只有五位(<strong>&lt;32</strong>)，限制太大，故设计<strong>I型</strong></p>
+<p>constant or address包含rd,shamt,funct，所以十六位</p>
+<p><strong>rt变为目的寄存器</strong></p>
+<table>
+<thead>
+<tr>
+<th>例</th>
+<th>op</th>
+<th>rs</th>
+<th>rt</th>
+<th>constant or address</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>addi</td>
+<td>8</td>
+<td>reg</td>
+<td>reg</td>
+<td><strong>address</strong></td>
+</tr>
+<tr>
+<td>lw</td>
+<td>35</td>
+<td>reg</td>
+<td>reg</td>
+<td><strong>address</strong></td>
+</tr>
+<tr>
+<td>sw</td>
+<td>43</td>
+<td>reg</td>
+<td>reg</td>
+<td><strong>address</strong></td>
+</tr>
+<tr>
+<td>lw $t0,300($t1)</td>
+<td>35</td>
+<td>9</td>
+<td>8</td>
+<td>1200(<strong>300 * 4</strong>)</td>
+</tr>
+</tbody></table>
+<p><strong>address</strong>表示十六位地址</p>
+<h2 id="逻辑操作"><a href="#逻辑操作" class="headerlink" title="逻辑操作"></a>逻辑操作</h2><h3 id="移位-gt-gt-lt-lt"><a href="#移位-gt-gt-lt-lt" class="headerlink" title="移位(&gt;&gt;&lt;&lt;)"></a>移位(&gt;&gt;&lt;&lt;)</h3><p>逻辑左移 (sll)：将一个字里面的所有位都向左移动，并在空出来的位上填充 0。</p>
+<p>逻辑右移 (srl)：将一个字里面的所有位都向左移动，并在空出来的位上填充 0。</p>
+<p>左移 𝑖 位就相当于乘以 2^𝑖，右移即除</p>
+<h3 id="按位与-AND"><a href="#按位与-AND" class="headerlink" title="按位与(AND)"></a>按位与(AND)</h3><p>AND 提供了一种将源操作数中某些位置为0 的能力，前提是另一个操作数中对应位为0。后一个操作数传统上被称为掩码(mask) ，寓意其可”隐藏”某些位。</p>
+<p>上下都为 <strong>1</strong> 则结果为 <strong>1</strong></p>
+<h3 id="按位或-OR"><a href="#按位或-OR" class="headerlink" title="按位或(OR)"></a>按位或(OR)</h3><p>上下任意一数为 <strong>1</strong> 则结果为 <strong>1</strong></p>
+<h3 id="按位取反-NOT"><a href="#按位取反-NOT" class="headerlink" title="按位取反(NOT)"></a>按位取反(NOT)</h3><p>对一个数进行操作，1变成0，0变成1</p>
+<h3 id="或非-NOT-OR"><a href="#或非-NOT-OR" class="headerlink" title="或非(NOT OR)"></a>或非(NOT OR)</h3><p>顾名思义，先<strong>或</strong>再<strong>取反</strong></p>
+<h3 id="异或-XOR"><a href="#异或-XOR" class="headerlink" title="异或(XOR)"></a>异或(XOR)</h3><p>相同置1，不相同置0</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="叶过程"><a href="#叶过程" class="headerlink" title="叶过程"></a>叶过程</h3><blockquote>
+<p>C 程序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">leaf_example</span> <span class="params">(<span class="type">int</span> g, <span class="type">int</span> h, <span class="type">int</span> i, <span class="type">int</span> j)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> f;</span><br><span class="line">	f = (g + h) - (i + j);</span><br><span class="line">	<span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后的MIPS 汇编代码是什么呢?</p>
+<p>参数变量 g 、h 、i 和 j 对应参数寄存器 $a0 、$a1 、$a2 和$a3，f 对应 $s0<br>假定需要保留$s0,$t0和$t1这三个寄存器</p>
+</blockquote>
+<blockquote>
+<p> <strong>解</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">leaf_example:	#子程序名，标号</span><br><span class="line">    addi $sp,$sp,-12	#将栈指针$sp向低地址压3个字用于保留原寄存器的值</span><br><span class="line">    sw $t1, 8($sp)</span><br><span class="line">    sw $t0, 4($sp)</span><br><span class="line">    sw $s0, 0($sp)	#保存原值</span><br><span class="line">    add $t0, $a0, $a1	# register $t0 contains g+h</span><br><span class="line">    add $t1, $a2, $a3	# register $t1 contains i+j</span><br><span class="line">    sub $s0, $t0, $t1 # f = (g + h) - (i + j)</span><br><span class="line">    add $v0, $t0, $t1	# 将f的值存进返回值寄存器$v0用于返回值</span><br><span class="line">    lw $s0, 0($sp)</span><br><span class="line">    lw $t0, 4($sp)</span><br><span class="line">    lw $t1, 8($sp)	#恢复原值</span><br><span class="line">    addi $sp, $sp, 12	#恢复栈指针原来的位置</span><br><span class="line">    jr $ra	#根据跳转寄存器中的返回地址跳转</span><br></pre></td></tr></table></figure>
+
+<p>栈的作用图</p>
+<img src="image-20221216203055223.png">
+</blockquote>
+<p>这个过程可叫做<strong>叶过程</strong>，即不调用其他过程的过程</p>
+<p>一般来说</p>
+<table>
+<thead>
+<tr>
+<th>保留</th>
+<th>不保留</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$s0~$s7</td>
+<td>$t0~$t9</td>
+</tr>
+<tr>
+<td>$sp</td>
+<td>$a0~$a3</td>
+</tr>
+<tr>
+<td>$ra</td>
+<td>$v0~$v1</td>
+</tr>
+<tr>
+<td>栈指针以上的栈</td>
+<td>栈指针以下的栈</td>
+</tr>
+</tbody></table>
+<h3 id="非叶过程"><a href="#非叶过程" class="headerlink" title="非叶过程"></a>非叶过程</h3><p>如果是非叶过程，即调用该过程的中途也要调用其他过程，可能会导致寄存器使用冲突</p>
+<p>解决方法就是<strong>将所有必须保留的寄存器压栈</strong></p>
+<ul>
+<li><strong>调用者</strong>将所有调用后还需要的参数寄存器 ($a0 - $a3) 或临时寄存器 ($t0 - $t9) 压栈</li>
+<li><strong>被调用者</strong>将返回地址寄存器$ra和被调用者使用的保留寄存器( $s0 - $s7) 都压栈</li>
+<li><strong>栈指针$sp</strong>随着栈中寄存器个数调整。到返回时，寄存器会从存储器中恢复，栈指针也随着重新调整。</li>
+</ul>
+<h4 id="递归过程"><a href="#递归过程" class="headerlink" title="递归过程"></a><strong>递归过程</strong></h4><p>重复调用函数</p>
+<blockquote>
+<p>下面是一个计算阶乘的递归过程:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fact</span> <span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;<span class="number">1</span>) </span><br><span class="line">        <span class="keyword">return</span>(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> ( n * fact(n <span class="number">-1</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该过程的MIPS 汇编代码是怎样的呢?</p>
+</blockquote>
+<blockquote>
+<p><strong>解</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">fact:</span><br><span class="line">	addi $sp, $sp, -8	</span><br><span class="line">	sw $ra, 4($sp)	#根据上述叶过程需保留 $ra</span><br><span class="line">	sw $a0, 0($sp)	#同样，参数寄存器 $a0(&lt;==&gt;n) 也需要保留</span><br><span class="line">	slti $t0, $a0, 1	# $a0 &lt; 1 时 $t0 置 1</span><br><span class="line">	beq $t0, $zero, L1	# if $t0 == 0, go to L1, else(即$t0 == 1) 则继续</span><br><span class="line">	addi $v0, $zero, 1	#retutn 1</span><br><span class="line">	addi $sp, $sp, 8	#并未进入其他过程，所以直接弹栈返回即可</span><br><span class="line">	jr $ra	#return</span><br><span class="line">	L1:</span><br><span class="line">		addi $a0, $a0, -1 # gets n - 1</span><br><span class="line">		jal fact	# call fact with (n - 1)</span><br><span class="line">	lw $a0, 0($sp)	#接下来的部分属于 fact</span><br><span class="line">	lw $ra, 4($sp)</span><br><span class="line">	addi $sp, $sp, 8	#嵌套了其他过程，所以其他过程进行完后要恢复原值</span><br><span class="line">	mul $v0, $a0, $v0	#将上一过程的返回值乘 n 来得到现在过程的返回值</span><br><span class="line">	jr $ra	#return</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h4 id="迭代过程"><a href="#迭代过程" class="headerlink" title="迭代过程"></a><strong>迭代过程</strong></h4><p><strong>循环某一过程</strong>而非循环进入函数</p>
+<blockquote>
+<p>考虑下面一个用来求和的过程:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sum</span> <span class="params">(<span class="type">int</span> n, <span class="type">int</span> acc)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> (n&gt;<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> sum (n – <span class="number">1</span>, acc + n) ;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> acc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该过程的MIPS 汇编代码是怎样的呢?</p>
+</blockquote>
+<blockquote>
+<p><strong>解</strong></p>
+<p>分析一下可知，如果 <strong>n&gt;0</strong> 则令 <strong>n-1</strong> 并且使 <strong>acc+n</strong></p>
+<p>完完全全可以用循环代替</p>
+<p><strong>假设 $a0 &#x3D; n  $a1 &#x3D; acc</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sum:</span><br><span class="line">	slit $t0, $a0, 1	# $a0 &lt; 1 时 $t0 置 1</span><br><span class="line">	bne $t0, $zero, sum_exit	# if $t0 == 0 , go to sum_exit</span><br><span class="line">	add $a1, $a1, $a0	# acc = acc + n</span><br><span class="line">	addi $a0, $a0, -1	# go to sum</span><br><span class="line">sum_exit:</span><br><span class="line">	add $v0, $a1, $zero	#return acc</span><br><span class="line">	jr $ra	#return</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h3 id="字符操作"><a href="#字符操作" class="headerlink" title="字符操作"></a>字符操作</h3><p>一个 <strong>char</strong> 一字节，八比特，最高表示 <strong>127</strong>，即<strong>ASCII</strong>码的127位</p>
+<p>所以对字符串的操作一般是 <strong>lb(字节读取) sb(字节存储)</strong></p>
+<blockquote>
+<p>C语言</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">strcpy</span> <span class="params">(<span class="type">char</span> x[], <span class="type">char</span> y[])</span> &#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> ((x[i] = y[i]) != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译后的MIPS汇编代码是什么？</p>
+</blockquote>
+<blockquote>
+<p><strong>解</strong></p>
+<p>假定数组 x 和 y 的基地址在 $a0 和 $a1 中，而 i 在 $s0 中</p>
+<p>strcpy 调整栈指针然后将保存的寄存器 $s0 保存在栈中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">strcpy:</span><br><span class="line">	addi $sp, $sp, -4</span><br><span class="line">	sw $s0, 0($sp)</span><br><span class="line">	add $s0, $zero, $zero	# 初始化 i</span><br><span class="line">	L1:</span><br><span class="line">		add $t1, $s0, $a1	# get address y[i]</span><br><span class="line">		lbu $t2, 0($t1)	# $t2 = y[i] 得到第 i 个字符</span><br><span class="line">		add $t3, $s0, $a0	# get address x[i]</span><br><span class="line">		sb $t2, 0($t3)	# x[i] = y[i]</span><br><span class="line">		beq $t2, $zero, L2 # if y[i] == 0 , go to L2</span><br><span class="line">		addi $s0, $s0, 1	# i = i + 1</span><br><span class="line">		j L1	# 不是则继续循环 L1</span><br><span class="line">	L2:</span><br><span class="line">		lw $s0, 0($sp)</span><br><span class="line">		addi $sp, $sp, 4</span><br><span class="line">		jr $ra	#return</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>一个字四个字节，一个字节八比特</li>
+<li>负数一般用补码表示(<strong>+1取反</strong>)</li>
+<li>无符号数即把符号位也当成一位数，如-1的无符号数为为<strong>4294967295</strong></li>
+<li>如果参数多于参数寄存器的数量(<strong>4</strong>)，<strong>MIPS</strong>约定将额外参数放在<strong>栈指针的上方</strong></li>
+</ul>
+<h3 id="利用无符号数进行边界检查"><a href="#利用无符号数进行边界检查" class="headerlink" title="利用无符号数进行边界检查"></a>利用无符号数进行边界检查</h3><p>可降低检验下标是否越界的开销</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sltu $t0, $s1, $t2	# $t0=0 if $s1 &gt;= $t2 or $s1 &lt;0</span><br><span class="line">beq $t0, $zero, IndexOutOfBounds	#if bad , goto Error</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/xlccccc">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://xlccccc.cn/">Another blog</a></span>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://anoquan.cn/">安权&#39;s blog</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://giscus.app/client.js"
+        data-repo="xlccccc/xlccccc.github.io"
+        data-repo-id="R_kgDOIgZjtQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOIgZjtc4CSx1S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+</html>
