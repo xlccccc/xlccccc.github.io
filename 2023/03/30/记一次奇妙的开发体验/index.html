@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        记一次奇妙的开发体验 - xlccccc&#39;s blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+    
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> Follow heart </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/xlccccc.jpg" />
+        </div>
+        <div class="name">
+            <i>xlccccc</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>COLLECT</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pypicgo"><span class="toc-text">pypicgo</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> Follow heart </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        记一次奇妙的开发体验
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2023-03-30 23:37:28</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#dev" title="dev">dev</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前换博客的时候提到，很大一原因是因为 <strong>typecho</strong> 上传 <strong>markdown</strong> 的时候，上传图片很很很不方便。换用 <strong>hexo</strong> 之后，其实并没有得到太大改善。后来用上了 <strong>PicGo</strong> 加上 <strong>github</strong> 图床，剪切板的图片可以用快捷键一键上传到 <strong>github</strong> 并且得到图片链接然后改为 <strong>markdown</strong> 格式，确实很好用。但是我记笔记大部分都是本地，很多不发博客的笔记完全没必要这样做，纯属增加劳动量。所以今天想发篇博客的时候看着那几十张图片，一个个拖、改，实在难以下手。于是，我想，能不能把要发的 <strong>markdown</strong> 一键上传图片，并且自动将里面的本地图片链接改成图床的链接呢？于是便有了这篇文章。</p>
+<h2 id="pypicgo"><a href="#pypicgo" class="headerlink" title="pypicgo"></a>pypicgo</h2><p>这种小量的工具还是python方便，我先想到的是PicGo有没有命令行版本，但并未发现。然后便看到了一个python包，<a target="_blank" rel="noopener" href="https://github.com/AnsGoo/PyPicGo">pypicgo</a><br>试了一下，这就是一个单纯的命令行工具，不能直接python内引用函数<br>于是…就只能，尝试改改这个包了</p>
+<p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunxd89737b111768818bdb57ffb0bb4e0b6chenghaiwen20230330232822-image-20230330223457538.png"></p>
+<p>这个 <strong>uploader.py</strong> 名字就已经很明显了，大部分的外层逻辑也都在这</p>
+<p>这两个参数就是命令行传参的两个参数，<strong>file</strong> 是图片文件，这里我改成了m</p>
+<p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/202303302340651.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parser.add_argument(<span class="string">&#x27;-m&#x27;</span>, <span class="string">&#x27;--mdfiles&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>大体逻辑其实很简单，就是正则匹配到 <strong>markdown</strong> 文件的本地图片路径并存入一个数组，然后遍历上传这些图片</p>
+<p>这里我也就加了两个函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">mdFileFindImg</span>(<span class="params">mdFile</span>):</span><br><span class="line">    files = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> mdFile:</span><br><span class="line">        <span class="keyword">if</span> line.find(<span class="string">&#x27;![&#x27;</span>) != -<span class="number">1</span>:</span><br><span class="line">            start = line.find(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">            end = line.find(<span class="string">&#x27;)&#x27;</span>, start)</span><br><span class="line">            files.append(line[start+<span class="number">1</span>:end])</span><br><span class="line">    <span class="keyword">return</span> files</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mdFileChange</span>(<span class="params">mdFile, oldFilepath, newFilepath</span>):</span><br><span class="line">    <span class="keyword">if</span> mdFile.find(oldFilepath) != -<span class="number">1</span>:</span><br><span class="line">        potision = mdFile.find(oldFilepath)</span><br><span class="line">        start = mdFile.find(<span class="string">&#x27;![&#x27;</span>, potision - <span class="number">30</span>, potision)</span><br><span class="line">        end  = mdFile.find(<span class="string">&#x27;)&#x27;</span>, potision)     </span><br><span class="line">        mdFile = mdFile.replace(mdFile[start:end + <span class="number">1</span>], <span class="string">&#x27;![](&#x27;</span> + newFilepath + <span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> mdFile</span><br></pre></td></tr></table></figure>
+
+<p>第一个用来正则匹配路径，第二个用来将 <strong>本地路径</strong> 改为 <strong>图床路径</strong></p>
+<p>所以很明显，更关键的问题是如何找到这个 <strong>图床路径</strong>，这个结果在运行的时候其实会打印出来，但打印的代码在</p>
+<p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/202303302341976.png"></p>
+<p>我没想到什么好的方法能将这个 <strong>message</strong> 传到 <strong>upload.py</strong> 中，之前其实也遇到过这种问题，最后我的解决一般都是序列化成文件，或者直接写入文件，这里我就用了后者的办法</p>
+<p>（PS：这里的 <strong>message</strong> ，是所有文件上传完后打印出来，打印的是所有的链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunxb4b959368a97541ee99cb9ce55f94e74chenghaiwen20230330220944-image-20230327163612053.png</span><br><span class="line"></span><br><span class="line">https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunxa695cf55618458b21f863dfe8adcfaa9chenghaiwen20230330220948-image-20230322171917611.png</span><br><span class="line"></span><br><span class="line">https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunxd4e8406dd0eaa317d3a413182c18044fchenghaiwen20230330220950-image-20230322172032540.png</span><br><span class="line"></span><br><span class="line">https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunx584e7aec0dac759ce9ee3d7daa45b930chenghaiwen20230330220952-image-20230322172055370.png</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>比如这样子，所以得清除一下空行，然后每个链接占一行这样子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys, os</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"><span class="keyword">from</span> pypicgo.core.base.plugin <span class="keyword">import</span> FinallyPlugin</span><br><span class="line"><span class="keyword">from</span> pypicgo.core.base.result <span class="keyword">import</span> Result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TyporaPlugin</span>(<span class="title class_ inherited__">FinallyPlugin</span>):</span><br><span class="line">    name = <span class="string">&#x27;Typora&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params">self, results: <span class="type">List</span>[Result]</span>):</span><br><span class="line">        urls = []</span><br><span class="line">        <span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">            <span class="keyword">if</span> result.status:</span><br><span class="line">                urls.append(result.remote_url)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(urls) &gt; <span class="number">0</span>:</span><br><span class="line">            message = os.linesep.join(urls)</span><br><span class="line">            sys.stdout.write(<span class="string">f&#x27;Upload Success:<span class="subst">&#123;os.linesep&#125;</span>message<span class="subst">&#123;os.linesep&#125;</span>&#x27;</span>)</span><br><span class="line">            lines = [line <span class="keyword">for</span> line <span class="keyword">in</span> message.splitlines() <span class="keyword">if</span> line.strip()]</span><br><span class="line">            f =  <span class="built_in">open</span>(<span class="string">&#x27;url.txt&#x27;</span>, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">            f.write(<span class="string">&#x27;\n&#x27;</span>.join(lines))</span><br><span class="line">            f.close()</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/202303302341916.png"></p>
+<p>然后直接上传 <strong>markdown</strong> 就ok啦</p>
+<p>然后我发现，这很容易上传成功了图片没改，不知道是网络问题还是python的问题，不过多执行几次就好了，就是有可能让图库乱了- - </p>
+
+        
+            <div class="donate-container">
+    <div class="donate-button">
+        <button id="donate-button">donate</button>
+    </div>
+    <div class="donate-img-container hide" id="donate-img-container">
+        <img id="donate-img" src="" data-src="/img/donate.jpg">
+        <p> 感谢鼓励 </p>
+    </div>
+</div>
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/xlccccc">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a target="_blank" rel="noopener" href="https://xlccccc.cn/">Another blog</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://giscus.app/client.js"
+        data-repo="xlccccc/xlccccc.github.io"
+        data-repo-id="R_kgDOIgZjtQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOIgZjtc4CSx1S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+</html>
