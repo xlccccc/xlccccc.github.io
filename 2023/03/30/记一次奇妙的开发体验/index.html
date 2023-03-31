@@ -164,7 +164,7 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前换博客的时候提到，很大一原因是因为 <strong>typecho</strong> 上传 <strong>markdown</strong> 的时候，上传图片很很很不方便。换用 <strong>hexo</strong> 之后，其实并没有得到太大改善。后来用上了 <strong>PicGo</strong> 加上 <strong>github</strong> 图床，剪切板的图片可以用快捷键一键上传到 <strong>github</strong> 并且得到图片链接然后改为 <strong>markdown</strong> 格式，确实很好用。但是我记笔记大部分都是本地，很多不发博客的笔记完全没必要这样做，纯属增加劳动量。所以今天想发篇博客的时候看着那几十张图片，一个个拖、改，实在难以下手。于是，我想，能不能把要发的 <strong>markdown</strong> 一键上传图片，并且自动将里面的本地图片链接改成图床的链接呢？于是便有了这篇文章。</p>
 <h2 id="pypicgo"><a href="#pypicgo" class="headerlink" title="pypicgo"></a>pypicgo</h2><p>这种小量的工具还是python方便，我先想到的是PicGo有没有命令行版本，但并未发现。然后便看到了一个python包，<a target="_blank" rel="noopener" href="https://github.com/AnsGoo/PyPicGo">pypicgo</a><br>试了一下，这就是一个单纯的命令行工具，不能直接python内引用函数<br>于是…就只能，尝试改改这个包了</p>
 <p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/liunxd89737b111768818bdb57ffb0bb4e0b6chenghaiwen20230330232822-image-20230330223457538.png"></p>
-<p>这个 <strong>uploader.py</strong> 名字就已经很明显了，大部分的外层逻辑也都在这</p>
+<p>这个 <strong>uploade.py</strong> 名字就已经很明显了，大部分的外层逻辑也都在这</p>
 <p>这两个参数就是命令行传参的两个参数，<strong>file</strong> 是图片文件，这里我改成了m</p>
 <p><img src="https://raw.githubusercontent.com/xlccccc/Image/master/hexoblog/202303302340651.png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parser.add_argument(<span class="string">&#x27;-m&#x27;</span>, <span class="string">&#x27;--mdfiles&#x27;</span>)</span><br></pre></td></tr></table></figure>
